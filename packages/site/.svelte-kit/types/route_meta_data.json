@@ -1,0 +1,15 @@
+{
+	"/": [],
+	"/writing": [
+		"src/routes/writing/+page.ts"
+	],
+	"/writing/[slug]": [
+		"src/routes/writing/[slug]/+page.ts"
+	],
+	"/api/posts": [
+		"src/routes/api/posts/+server.ts"
+	],
+	"/api": [
+		"src/routes/api/+server.js"
+	]
+}
