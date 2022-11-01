@@ -46,7 +46,7 @@ h1 { font-size: clamp(2rem, calc(2vw + 2rem), 3rem);}
 h2 { font-size: clamp(1.25rem, calc(2vw + 1.25rem), 2rem); }
 h3 { font-size: clamp(1.15rem, calc(2vw + 1.15rem), 1.5rem); }
 
-p, a, span, blockquote, figcaption {
+p, a, span:not(.token), blockquote, figcaption {
   font-family: var(--copy-family);
   font-weight: var(--copy-weight);
   color: var(--text-primary);
