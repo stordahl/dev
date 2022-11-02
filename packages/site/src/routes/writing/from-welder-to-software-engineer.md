@@ -1,6 +1,7 @@
 ---
 title: From Welder to Software Engineer
 date: "2022-01-26" 
+status: published
 ---
 
 One of the most frustrating misconceptions I hear about the tech industry are those that poke fun an initiatives that bring traditionally blue collar populations into the industry. They'll say "what, you expect a coal miner to learn to code?". To which I reply with a resounding "Yes!". I've talked with a lot of people who have made a transition from blue collar industries to tech and the most prominent theme of those conversations is how much those blue collar skills become useful tools in tech. So I wanted to take this opportunity to share my odd journey into tech. 

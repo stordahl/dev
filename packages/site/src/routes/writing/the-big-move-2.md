@@ -1,6 +1,7 @@
 ---
 title: "The Big Move: Thoughts on a Pilot Project"
 date: "2022-01-05"
+status: published
 ---
 
 I started off this year with a soft launch for our pilot project at Hennepin Tech for testing the waters with Svelte.js & Sanity.io. This project will help us decide if this new stack is something we want to use across all of our web products. Here is a list of what I've learned when considering using Jamstack tooling at a large higher education institution...

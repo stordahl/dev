@@ -1,6 +1,7 @@
 ---
 title: "The Big Move: the tale of a large migration to the Jamstack"
 date: "2021-10-15"
+status: published
 ---
 
 Currently, I’m in a role managing all web products and digital media systems for a large technical college. I’ve been in the role for about four months and have recently kicked off a large migration from the current monolithic CMS web system to the Jamstack. Previously, the management and maintenance of the monolithic system had been poor and at times non-existent. As I conducted an audit of the system, it became clear that the amount of labor needed to fix all of the issues may make a full rebuild a tangible option. I made my case to the leadership and due to the low cost of implementation we’ve decided to move forward with the project.
