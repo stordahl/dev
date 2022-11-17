@@ -26,7 +26,7 @@
 />
 
 <h1>writing</h1>
-{#each posts as { meta:{ title, date }, path }, index}
-		<LargeListItem {title} {index} href={path}/>
+{#each posts as { meta:{ title, date, status }, path }, index}
+		<LargeListItem {title} {index} href={path} {status}/>
 {/each}
 

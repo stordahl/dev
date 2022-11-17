@@ -2,11 +2,14 @@
 	export let href:string
 	export let title:string
 	export let index:number
+	export let status:PostStatus = 'published'
+
+	type PostStatus = 'draft' | 'published'
 
 	$: incrementedIndex = index + 1
 </script>
 
-<article class="list-item">
+<article class="list-item" class:draft={status === 'draft'}>
 	<a href={href}>
 		<span>{incrementedIndex}</span>
 		<h2>{title}</h2>
@@ -14,15 +17,28 @@
 </article>
 
 <style>
+	.draft:before {
+		content: '*';
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		left: 0px;
+    color: var(--text-secondary);
+    font-size: 50px;
+	}
+
 	a:hover {
     text-decoration: unset;
   }
-  article {
+  
+	article {
+		position: relative;
     background-color: var(--bg);
     border-top: 2px solid var(--text-primary);
     padding: 2.5rem clamp(10px, calc(10px + 2vw), 60px);
     flex-wrap: wrap;
   }
+	
 	.list-item a {
 	  display: grid;
     grid-template-columns: 1fr;
@@ -32,12 +48,15 @@
     gap: 1rem;
     position: relative;
 	}
-  .list-item a:hover { border-bottom: none; }
-  .list-item a:hover h2 { 
+  
+	.list-item a:hover { border-bottom: none; }
+  
+	.list-item a:hover h2 { 
     text-decoration: underline; 
     cursor: pointer;
   }
-  .list-item a > span {
+  
+	.list-item a > span {
     position: absolute;
     font-family: var(--heading-family);
     font-size: 120px;
@@ -46,7 +65,8 @@
     opacity: 10%;
     /* line-height: 0.5; */
   }
-  .list-item h2 {
+  
+	.list-item h2 {
     font-family: var(--copy-family);
     z-index: 1;
     color: var(--text-secondary);

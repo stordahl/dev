@@ -1,4 +1,4 @@
-export const fetchMarkdownPosts = async () => {
+export const fetchMarkdownPosts = async (dev:boolean) => {
   const allPostFiles = import.meta.glob('/src/routes/writing/posts/*.md')
   const iterablePostFiles = Object.entries(allPostFiles)
   
@@ -9,10 +9,10 @@ export const fetchMarkdownPosts = async () => {
 
       return {
         meta: metadata,
-        path: postPath,
+        path: postPath
       }
     })
   )
 
-  return allPosts.filter(post => post.meta.status === 'published')
+  return dev ? allPosts : allPosts.filter(post => post.meta.status === 'published');
 }
