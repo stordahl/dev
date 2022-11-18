@@ -5,7 +5,7 @@
 	// import { sendPageVisitEvent } from '$lib/utils'
 
 	onMount(() => {
-		if(!!dev && !!window){
+		if(!dev && !!window){
 			posthog.init('phc_SFf81Xbhjao1qmoDa3NZGj9i5tPoc4RhDlCWq7lbadE', { api_host: 'https://app.posthog.com' });
 			// Posthog already sends PageView events, but I'm keeping this code around as a template for future events
 			// sendPageVisitEvent();	
