@@ -36,6 +36,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"posthog-js": "^1.35.0",
 		"svelte-seo": "^1.4.1"
 	}
 }

@@ -1,3 +1,7 @@
+import type { PageVisitEvent } from '$lib/types'
+
+import posthog from 'posthog-js'
+
 export const fetchMarkdownPosts = async (dev:boolean) => {
   const allPostFiles = import.meta.glob('/src/routes/writing/posts/*.md')
   const iterablePostFiles = Object.entries(allPostFiles)
@@ -15,4 +19,19 @@ export const fetchMarkdownPosts = async (dev:boolean) => {
   )
 
   return dev ? allPosts : allPosts.filter(post => post.meta.status === 'published');
+}
+
+export const sendPageVisitEvent = () => {
+		if(!window) return
+
+		const { host, href, origin, pathname, protocol } = window.location
+		const { language, userAgent, vendor } = window.navigator
+
+		const data:PageVisitEvent = {
+			timestamp: new Date().getUTCDate(),
+			location: { host, href, origin, pathname, protocol },
+			navigator: { language, userAgent, vendor },
+		} 
+
+		posthog.capture('PageVisit', data)
 }

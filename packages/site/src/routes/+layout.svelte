@@ -1,3 +1,17 @@
+<script lang="ts">
+	import {onMount} from 'svelte'
+	import {dev} from '$app/environment'
+	import posthog from 'posthog-js'
+	// import { sendPageVisitEvent } from '$lib/utils'
+
+	onMount(() => {
+		if(!!dev && !!window){
+			posthog.init('phc_SFf81Xbhjao1qmoDa3NZGj9i5tPoc4RhDlCWq7lbadE', { api_host: 'https://app.posthog.com' });
+			// Posthog already sends PageView events, but I'm keeping this code around as a template for future events
+			// sendPageVisitEvent();	
+		}
+	})
+</script>
 <header>
 	<span>JACOB STORDAHL</span>
 	<nav>
