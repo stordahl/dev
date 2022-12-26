@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
 		"dev": "pnpm --filter @stordahl/* dev",
+    "build": "pnpm --filter @stordahl/* build",
+    "build:prod": "pnpm --filter @stordahl/* build:prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
