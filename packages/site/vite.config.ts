@@ -3,7 +3,10 @@ import fs from 'fs';
 import type { UserConfig } from 'vite';
 
 const config: UserConfig = {
-	plugins: [sveltekit(), rawFonts(['.ttf'])]
+	plugins: [sveltekit(), rawFonts(['.ttf'])],
+  server: {
+    hmr: false
+  }
 };
 
 function rawFonts(ext:string[]) {
