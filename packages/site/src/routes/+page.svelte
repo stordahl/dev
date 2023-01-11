@@ -25,7 +25,7 @@
   <h1>Hi, I'm Jacob.</h1>
   <p>
     I'm a Software Engineer, obsessed with building tools and infrastructure that enable front-end teams to be productive. 
-    Currently, I'm building radical ecommerce user experiences at <a class="out" href="http://stylitics.com">Stylitics.</a> Check out some of my open source work <a href="https://github.om/stordahl">here</a>.
+    Currently, I'm building radical ecommerce user experiences at <a class="out" href="http://stylitics.com">Stylitics.</a> Check out some of my open source work <a href="https://github.com/stordahl">here</a>.
     You can reach me on <a class="out" href="https://twitter.com/stordahl_">twitter</a> or shoot me an <a class="out" href="mailto:jacob@stordahl.dev">email</a>.
     <span class="strike">I'm currently available for hire.</span>
   </p>
